@@ -1,6 +1,22 @@
 from flask import *
 import os, json, time, random
 
+'''
+Current features:
+	Creating of a player database (as a JSON file).
+	Logging in as an existing player.
+	
+	Players start with 1000 credit.
+	There are four cities, each city has a list of commodities it can buy/sell.
+
+Not yet implemented features:
+	Players can buy and sell commodities in their current city.
+	Players can pay to move between cities.
+	Players can see other players located in the same city and can send them messages
+	Players can post buy/sell orders in a city, that can be acted on by other players
+
+'''
+
 app = Flask(__name__)
 app.secret_key = '1234567'
 
