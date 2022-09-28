@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+	You are playing as <strong>{{name}}</strong><hr/>
+	<p>Location: <h1>{{players[name]['location']}}</h1></p>
+	<p>Money: {{players[name]['money']}}</p>
+	<hr/>
+	<h2>Local Marketplace</h2>
+	<ul>
+	
+	{% for item, price in city.get_prices().items() %}
+		<li>{{item}} - {{price}}</li>
+	{% endfor %}
+	</ul>
+	</body>
+</html>
